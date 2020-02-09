@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Neural Style Transfer</title>
+</head>
+
+<body>
+	<h1>Neural Style Transfer</h1>
+	<form method="POST" action="/about" enctype="multipart/form-data">
+		<strong>Content Image</strong>
+		<input type="file" name="img" >
+		<strong>Style Image</strong>
+		<input type="file" name="img1">
+		<input type="submit">
+	</form>
+
+	{% if result %}
+	<img src="{{result['a']}}" width="20%">
+	<img src="{{result['b']}}" width="20%">
+	<img src="{{result['c']}}" width="20%">
+	{% endif %}
+	
+
+</body>
+</html>
